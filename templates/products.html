@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}Order{% endblock %}
+
+{% block content %}
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 20px;
+        ackground-image: 
+                  linear-gradient(rgb(49, 12, 12), rgba(63, 16, 16, 0.719)),
+                  url('/templates/ai-generated-cake-picture.jpg');
+    }
+    table{
+        width: 100%;
+    }
+</style>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for product in products %}
+        <tr>
+            <td>{{ product.Product }}</td>
+            <td>{{ product.Quantity }}</td>
+            <td>{{ product.Price }}</td>
+            <td>
+                <a href="{{ url_for('edit_or_delete', product_id=product.id) }}">Edit/Delete</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

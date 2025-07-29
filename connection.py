@@ -5,10 +5,10 @@ username="root"
 password="2480"
 database="order_db"
 
-path=f"mysql+mysqldb://{username}:{password}@localhost/{database}"
+path=f"mysql+pymysql://{username}:{password}@localhost/{database}"
 
 data=create_engine(path)
 
-Session=sessionmaker
+Session=sessionmaker(bind=data)
 
-session=Session
+session=Session()

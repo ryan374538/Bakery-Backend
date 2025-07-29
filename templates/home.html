@@ -5,14 +5,71 @@
 
 {% block content %}
 <form method="post">
-    <label for="Product"></label>
-    <input type="text"name="product">
-     <label for="Quantity"></label>
-    <input type="text"name="Quantity">
-     <label for="Price"></label>
-    <input type="text"name="Price">
+    <h1>ORDER NOW</h1>
+    <label for="Product">Product</label>
+    <input type="text"name="Product"placeholder="enter product"class="box"><br>
+     <label for="Quantity">Quantity</label>
+    <input type="text"name="Quantity"placeholder="enter quantity"class="box"><br>
+     <label for="Price">Price</label>
+    <input type="text"name="Price"placeholder="enter price"class="box"><br>
     <button type="submit">Submit</button>
 </form>
+<style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 20px;
+        background-image: 
+                  linear-gradient(rgb(49, 12, 12), rgba(63, 16, 16, 0.719)),
+                  url('/templates/ai-generated-cake-picture.jpg');
+
+    }
+    form{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        background-color: rgb(63, 16, 16);
+        width: 100%;
+        max-width: 300px;
+        align-items: center;
+        padding: 20px;
+        border-radius: 30px;
+        color: white;
+        box-shadow: 0px 15px 15px 15px rgba(0, 0, 0, 0.664);
+    }
+    .box{
+        background-color: blanchedalmond;
+        border: none;
+        text-align: center;
+        outline: none;
+        width: 100%;
+        border-radius: 30px;
+        aspect-ratio: 9/1;
+    }
+    form:hover{
+        transform: rotateX('30deg');
+    }
+    button{
+        background-color: blanchedalmond;
+        color:rgb(41, 10, 10) ;
+        width: 100%;
+        max-width: 150px;
+        border-radius: 30px;
+        aspect-ratio: 4/1;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        margin-top: 10px;
+    }
+    button:hover{
+        color: blanchedalmond;
+        background-color:rgb(41, 10, 10) ;
+        transition:all 0.7s ease ;
+        transform: translateY(-5px);
+    }
+</style>
 
 
 
